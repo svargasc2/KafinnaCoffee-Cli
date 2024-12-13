@@ -13,6 +13,7 @@ export const useProducts = () => {
 
 export const ProductsProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
+  const [productsImages, setProductsImages] = useState({}); // Mapa de imágenes por producto
 
   const getProducts = async () => {
     try {
@@ -23,8 +24,26 @@ export const ProductsProvider = ({ children }) => {
     }
   };
 
+  const getImagesByProductId = async (productId) => {
+    try {
+      const res = await protectedRoute().get(`/images-products/${productId}`);
+      return res.data; // Devuelve las imágenes para el producto específico
+    } catch (error) {
+      console.log(`Error fetching images for product ${productId}`, error);
+      return [];
+    }
+  };
+
   return (
-    <ProductsContext.Provider value={{ products, getProducts }}>
+    <ProductsContext.Provider
+      value={{
+        products,
+        getProducts,
+        productsImages,
+        setProductsImages,
+        getImagesByProductId,
+      }}
+    >
       {children}
     </ProductsContext.Provider>
   );

@@ -3,11 +3,11 @@ import React from "react";
 function NavbarMenu() {
   return (
     <>
-      <header className="w-full flex justify-center bg-[#302218] h-[20vh]">
+      <header className="w-full flex justify-center bg-[#24250e] min-h-[20vh]">
         <nav className="w-[80%] flex justify-center py-4 items-center">
           <div className="w-[30%] flex items-center gap-4">
             <img src="https://via.placeholder.com/150" className="rounded-full" alt="" />
-            <h1 className="text-white text-lg font-semibold">Kafinna Coffee</h1>
+            <h1 className="text-white text-lg font-semibold">Kafinna Store</h1>
           </div>
           <ul className="w-[60%] flex justify-evenly">
             <li className="text-white text-lg font-semibold"><a href="/">Inicio</a></li>

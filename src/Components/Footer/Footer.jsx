@@ -10,11 +10,11 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#302218] text-white py-8 px-4">
+    <footer className="bg-[#24250e] text-white py-8 px-4">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
         {/* Newsletter Section */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Kafinna Coffee</h3>
+          <h3 className="text-lg font-semibold mb-4">Kafinna Store</h3>
           <p className="text-sm mb-4">
             Stay in the loop with our newsletter subscription. Get the latest
             updates, exclusive access to deals, and special promotions.
@@ -95,7 +95,7 @@ export default function Footer() {
       </div>
 
       <div className="flex flex-col items-center mt-8 border-t border-gray-700 pt-4">
-        <p className="text-sm">©2024 KafinnaCoffee. All rights reserved.</p>
+        <p className="text-sm">©2024 KafinnaStore. All rights reserved.</p>
         <div className="flex justify-center space-x-4 mt-4">
           <a href="#" className="hover:opacity-75">
             <FontAwesomeIcon icon={faLinkedin} size="lg" />

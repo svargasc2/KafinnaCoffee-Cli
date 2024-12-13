@@ -10,10 +10,17 @@ export const CartProvider = ({ children }) => {
 
   const addToCart = (product) => {
     setCartItems((prevItems) => {
-      const itemExists = prevItems.find((item) => item.id === product.id);
+      const itemExists = prevItems.find(
+        (item) =>
+          item.id === product.id &&
+          item.selectedSize === product.selectedSize &&
+          item.selectedColor === product.selectedColor
+      );
       if (itemExists) {
         return prevItems.map((item) =>
-          item.id === product.id
+          item.id === product.id &&
+          item.selectedSize === product.selectedSize &&
+          item.selectedColor === product.selectedColor
             ? { ...item, quantity: item.quantity + 1 }
             : item
         );
@@ -23,9 +30,11 @@ export const CartProvider = ({ children }) => {
           {
             id: product.id,
             name: product.name,
-            price: parseFloat(product.price), // Asegúrate de que sea un número
+            price: parseFloat(product.price),
             image: product.image,
             quantity: 1,
+            selectedSize: product.selectedSize,
+            selectedColor: product.selectedColor,
           },
         ];
       }

@@ -27,15 +27,18 @@ export default function TestimonialsSection() {
   return (
     <section className="bg-white py-16 px-4">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-4 text-[#302218]">WHAT ARE THEY SAY ABOUT US</h2>
-        <p className="text-lg mb-12 text-[#302218]">
-          Listen directly from our customers about their experiences with our outstanding service. These are real stories from people who have chosen us.
+        <h2 className="text-3xl font-bold mb-4 text-[#24250e]">
+          QUE DICEN DE NOSOTROS
+        </h2>
+        <p className="text-lg mb-12 text-[#24250e]">
+          Lea a nuestros clientes contar sobre sus experiencias
+          con nuestro excelente servicio.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-white">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-[#edebd4] text-[#302218] rounded-lg p-6 shadow-lg"
+              className="bg-[#bfb85c] text-[#24250e] rounded-lg p-6 shadow-lg"
             >
               <h3 className="text-lg font-semibold mb-2">{testimonial.name}</h3>
               <p className="text-sm mb-4">{testimonial.text}</p>
